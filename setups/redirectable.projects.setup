@@ -67,7 +67,7 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="eclipse.target.platform"
-      defaultValue="None"
+      defaultValue="2020-03"
       storageURI="scope://Workspace"
       label="Target Platform">
     <annotation
@@ -130,6 +130,13 @@
         value="None"
         label="None"/>
     <description>Choose the compatibility level of the target platform</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:EclipseIniTask"
+      option="-Doomph.redirection.projects"
+      value="=index:/redirectable.projects.setup->https://raw.githubusercontent.com/MDSD-Tools/Dev-EclipseInstaller/master/setups/redirectable.projects.setup"
+      vm="true">
+    <description>MDSD.tools Catalog Redirection</description>
   </setupTask>
   <project href="https://raw.githubusercontent.com/MDSD-Tools/Dev-EclipseInstaller/master/setups/tools.mdsd.projects.setup#/"/>
   <description>MDSD.tools Curated Project Catalog</description>
